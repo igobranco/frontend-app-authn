@@ -7,13 +7,11 @@
     "url": "git+https://github.com/edx/frontend-app-authn.git"
   },
   "browserslist": [
-    "last 2 versions",
-    "ie 11"
+    "extends @edx/browserslist-config"
   ],
   "scripts": {
     "build": "fedx-scripts webpack",
     "i18n_extract": "BABEL_ENV=i18n fedx-scripts babel src --quiet > /dev/null",
-    "is-es5": "es-check es5 ./dist/*.js",
     "lint": "fedx-scripts eslint --ext .js --ext .jsx .",
     "snapshot": "fedx-scripts jest --updateSnapshot",
     "start": "fedx-scripts webpack-dev-server --progress",
@@ -74,12 +72,12 @@
     "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
+    "@edx/browserslist-config": "1.0.0",
     "@edx/frontend-build": "5.6.11",
     "babel-plugin-react-intl": "8.2.25",
     "codecov": "3.8.1",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
-    "es-check": "5.2.3",
     "glob": "7.1.6",
     "history": "5.0.0",
     "husky": "4.3.8",
